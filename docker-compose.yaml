@@ -38,7 +38,7 @@ services:
     - mysql
     - cart
   rabbitmq:
-    image: nagaraj411/rabbitmq:v3
+    image: rabbitmq:v3
     container_name: rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
