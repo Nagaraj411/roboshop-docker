@@ -36,7 +36,16 @@ This repo contains a production-ready multi-container setup for the Roboshop e-c
     - 🔐 Environment Variables – Secured RabbitMQ credentials in payment service
     - 📞 Internal DNS – Services communicate by name (e.g., mongodb, redis, cart)
 
-🏁 Getting Started
-Make sure the Docker network is created before launching:
-docker network create roboshop
-docker-compose up -d
+
+* 🏁 Getting Started
+    🔧 Create Docker network
+    docker network create roboshop
+
+* 🚀 Launch all services
+    docker-compose up -d
+
+* 📦 Check running containers
+    docker ps
+
+* 🧹 Stop and remove containers
+    docker-compose down
