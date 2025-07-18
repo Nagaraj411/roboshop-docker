@@ -37,15 +37,15 @@ This repo contains a production-ready multi-container setup for the Roboshop e-c
     - 📞 Internal DNS – Services communicate by name (e.g., mongodb, redis, cart)
 
 
-* 🏁 Getting Started
+# 🏁 Getting Started
     🔧 Create Docker network
     docker network create roboshop
 
-* 🚀 Launch all services
+# 🚀 Launch all services
     docker-compose up -d
 
-* 📦 Check running containers
+# 📦 Check running containers
     docker ps
 
-* 🧹 Stop and remove containers
+# 🧹 Stop and remove containers
     docker-compose down
