@@ -1,8 +1,8 @@
-🤖 Roboshop Microservices - Docker Setup
+## 🤖 Roboshop Microservices - Docker Setup
 📦 Overview
 This repo contains a production-ready multi-container setup for the Roboshop e-commerce platform, orchestrated using Docker and a shared custom bridge network (roboshop). Each microservice is isolated, scalable, and networked for seamless communication.
 
-🧱 Network Configuration
+# 🧱 Network Configuration
     networks:
     default:
         driver: bridge
