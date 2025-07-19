@@ -4,18 +4,18 @@ networks:
     name: roboshop
     external: true # I created networks already using docker network create roboshop
 
-volumes:
-  mongodb: # docker volume creates MongoDB
-  redis: # docker volume creates Redis
-  mysql: # docker volume creates MySQL
-  rabbitmq:  # docker volume creates RabbitMQ
+# volumes:
+#   mongodb: # docker volume creates MongoDB
+#   redis: # docker volume creates Redis
+#   mysql: # docker volume creates MySQL
+#   rabbitmq:  # docker volume creates RabbitMQ
 
 services:
   mongodb:
     image: nagaraj411/mongodb:v1
     container_name: mongodb
-    volumes:
-      - mongodb:/data/db # The mongoDB data will be stored in a Docker volume in /data/db
+    # volumes:
+    #   - mongodb:/data/db # The mongoDB data will be stored in a Docker volume in /data/db
   catalogue:
     image: nagaraj411/catalogue:v1
     container_name: catalogue
@@ -24,8 +24,8 @@ services:
   redis:
     image: redis:7.0  # Use the official Redis image
     container_name: redis
-    volumes:
-      - redis:/data # The Redis data will be stored in a Docker volume in /data
+    # volumes:
+    #   - redis:/data # The Redis data will be stored in a Docker volume in /data
   user:
     image: nagaraj411/user:v1
     container_name: user
@@ -41,8 +41,8 @@ services:
   mysql:
     image: nagaraj411/mysql:v1
     container_name: mysql
-    volumes:
-    - mysql:/var/lib/mysql # The MySQL data will be stored in a Docker volume in /var/lib/mysql
+    # volumes:
+    # - mysql:/var/lib/mysql # The MySQL data will be stored in a Docker volume in /var/lib/mysql
   shipping:
     image: nagaraj411/shipping:v1
     container_name: shipping
@@ -55,8 +55,8 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
       RABBITMQ_DEFAULT_PASS: roboshop123
-    volumes:
-      - rabbitmq:/var/lib/rabbitmq # The RabbitMQ data will be stored in a Docker volume in /var/lib/rabbitmq
+    # volumes:
+    #   - rabbitmq:/var/lib/rabbitmq # The RabbitMQ data will be stored in a Docker volume in /var/lib/rabbitmq
   payment:
     image: nagaraj411/payment:v1
     container_name: payment
