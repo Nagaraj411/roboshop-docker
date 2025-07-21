@@ -83,4 +83,4 @@ services:
     - cart
     - shipping
     - payment
-  restart: always
+    restart: always
