@@ -76,10 +76,11 @@ services:
     image: nagaraj411/frontend:v1
     container_name: frontend
     ports:
-    - 80:80
+    - "80:80"
     depends_on:
     - catalogue
     - user
     - cart
     - shipping
     - payment
+  restart: always
